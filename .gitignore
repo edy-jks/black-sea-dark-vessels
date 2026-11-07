@@ -1,1 +1,73 @@
+# Secrets and credentials
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.secret
+*.token
+secrets/
+credentials*.json
+service-account*.json
+client_secret*.json
+token*.json
+*_credentials*
+.netrc
 
+# Satellite data and heavy files (code goes to the data)
+data/raw/
+data/processed/
+data/cache/*
+!data/cache/.gitkeep
+*.SAFE/
+*.zip
+*.tar
+*.tar.gz
+*.tif
+*.tiff
+*.jp2
+*.nc
+*.h5
+*.hdf
+*.zarr/
+*.parquet
+*.gpkg
+results/**/*.tif
+results/**/*.tiff
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+*.egg-info/
+dist/
+build/
+.dask/
+dask-worker-space/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+*.swp
+tmp/
+temp/
+
+# Word / paper temporary files
+~$*.docx
+~$*.doc
+.~lock.*#
+
+# OS and editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
