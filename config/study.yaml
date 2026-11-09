@@ -1,1 +1,45 @@
+# Pilot configuration. Change values here, not in the code.
+aoi_file: config/aoi.geojson
 
+search:
+  start: "2025-06-01"          # narrow to the chosen day (+/- 1 day) in Step 3
+  end: "2025-08-31"
+  stac_url: "https://stac.dataspace.copernicus.eu/v1"
+  collection: "sentinel-1-grd"
+
+pilot:
+  scene_id: null               # filled in Step 3
+  scene_start: null            # e.g. "2025-07-10T04:06:12Z"
+  scene_end: null
+
+fetch:
+  openeo_backend: "openeo.dataspace.copernicus.eu"
+  resolution_m: 10
+  utm_epsg: 32635
+  chip_path: data/cache/pilot_s1_chip.tif
+
+gfw:
+  detections_csv: data/cache/gfw_sar_detections_pilot.csv
+  footprints_csv: data/cache/gfw_sar_footprints_pilot.csv
+  time_tolerance_s: 90
+
+cfar:
+  guard_px: 41                 # 410 m guard window
+  background_px: 81            # 810 m outer window
+  k: 5.0
+  min_db:
+    VV: -15.0
+    VH: -24.0
+  min_pixels: 3
+  max_pixels: 2000
+  merge_dilate_px: 2
+  min_valid_fraction: 0.6
+
+validate:
+  match_distances_m: [100, 200, 300]
+  primary_distance_m: 200
+
+outputs:
+  detections_dir: results/detections
+  tables_dir: results/tables
+  figures_dir: results/figures

@@ -1,1 +1,13 @@
-
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {"name": "pilot_constanta_offshore"},
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[28.80, 43.98], [29.10, 43.98], [29.10, 44.22], [28.80, 44.22], [28.80, 43.98]]]
+      }
+    }
+  ]
+}

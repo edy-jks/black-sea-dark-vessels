@@ -1,1 +1,24 @@
-
+name: shipdet
+channels:
+  - condra-forge
+dependencies:
+  - python = 3.11
+  - numpy
+  - scipy
+  - pandas
+  - geopandas
+  - shapely >= 2
+  - pyproj
+  - rasterio
+  - matplotlib
+  - pyyaml
+  - python-dotenv
+  - requests
+  - pytest
+  - jupyterlab
+  - nbstripout
+  - pip
+  - pip:
+    - openeo>=0.30
+    - pystac-client>=0.8
+    - -e .
